@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} - DXSF CS Club</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <div id="header" class="header">
+            <h1 class="header-title">The Dexter Southfield Computer Science Club</h1>
+            <div class="header-logo-container">
+                <img src="{{ url_for('static', filename='images/dxsfpixelart.png') }}" alt="DXSF CS Club Logo" class="header-logo">
+            </div>
+        </div>
+        <div id="nav" class="nav">
+            <ul>
+                <li><a href="/" class="{% if request.path == '/' %}nav-selected{% endif %}">Home</a></li>
+                <li><a href="/about" class="{% if request.path == '/about' %}nav-selected{% endif %}">About</a></li>
+                <li><a href="/puzzles" class="{% if request.path == '/puzzles' %}nav-selected{% endif %}">Puzzles</a></li>
+                <li><a href="/projects" class="{% if request.path == '/projects' %}nav-selected{% endif %}">Projects</a></li>
+                <li><a href="/resources" class="{% if request.path == '/resources' %}nav-selected{% endif %}">Resources</a></li>
+            </ul>
+        </div>
+        <div id="content" class="content">{% block content %}{% endblock %}</div>
+        <div id="footer" class="footer">
+            <p>&copy; 2025 DXSF Computer Science Club</p>
+        </div>
+    </body>
+</html>
