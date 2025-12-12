@@ -13,25 +13,21 @@ def favicon():
 
 @bp.errorhandler(404)
 def page_not_found(error):
-    return render_template('auth/page_not_found.html'), 404
+    return render_template('site/page_not_found.html'), 404
 
 @bp.route('/')
 def index():
-    return render_template('homepage.html')
+    return render_template('site/homepage.html')
 
 
 @bp.route('/about')
 def about():
-    return render_template('about.html')
-
-@bp.route('/puzzles')
-def puzzles():
-    return render_template('puzzles.html')
+    return render_template('site/about.html')
 
 @bp.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('site/projects.html')
 
 @bp.route('/resources')
 def resources():
-    return render_template('resources.html')
+    return render_template('site/resources.html')

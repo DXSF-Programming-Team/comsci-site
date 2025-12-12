@@ -2,15 +2,27 @@ HOW TO INSTALL SITE LOCALLY
 
 1. Create a folder that will store the codebase.
 2. Open this folder in your IDE of choice. (IDE = integrated development environment; e.g. Visual Studio Code)
-3. Open the terminal in your IDE and run the following command:
+3. Open the terminal in your IDE and run the following commands:
 
+First:
 ```bash
-git clone https://github.com/DXSF-Programming-Team/parent-app.git
+git init
 ```
-
-This clones the GitHub repository into your current directory.
+This starts a local repository for you to work on.
 
 (If this command fails, it is because you have not installed git yet. Follow the steps here: https://git-scm.com/install/)
+
+Next:
+```bash
+git remote add origin https://github.com/DXSF-Programming-Team/comsci-site.git
+```
+This tells git where to look for code.
+
+Finally:
+```bash
+git pull origin main
+```
+This clones the GitHub repository into your current directory.
 
 
 Then create a virtual environment:
@@ -32,6 +44,11 @@ Install the necessary packages:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Initialize the database:
+```bash
+flask --app flaskr init-db
 ```
 
 Then you can run the site locally with the following command:

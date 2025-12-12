@@ -74,6 +74,35 @@ body {
     color: #ccc !important;
 }
 
+.puzzle-nav {
+    display: flex;
+    background-color: #ccc;
+    width: 100%;
+    justify-content: center;
+}
+
+.puzzle-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.puzzle-nav ul li a {
+    color: #002b5b;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.puzzle-nav ul li a:hover {
+    color: #9e0227;
+}
+
+.puzzle-nav-selected {
+    color: #9e0227 !important;
+}
 .content {
     padding: 20px;
 }

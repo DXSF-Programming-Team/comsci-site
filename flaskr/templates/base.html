@@ -9,18 +9,27 @@
         <div id="header" class="header">
             <h1 class="header-title">The Dexter Southfield Computer Science Club</h1>
             <div class="header-logo-container">
-                <img src="{{ url_for('static', filename='images/dxsfpixelart.png') }}" alt="DXSF CS Club Logo" class="header-logo">
+                <img src="{{ url_for('static', filename='images/dxsfpix-noborder.png') }}" alt="DXSF CS Club Logo" class="header-logo">
             </div>
         </div>
         <div id="nav" class="nav">
             <ul>
                 <li><a href="/" class="{% if request.path == '/' %}nav-selected{% endif %}">Home</a></li>
                 <li><a href="/about" class="{% if request.path == '/about' %}nav-selected{% endif %}">About</a></li>
-                <li><a href="/puzzles" class="{% if request.path == '/puzzles' %}nav-selected{% endif %}">Puzzles</a></li>
+                <li><a href="/puzzles" class="{% if request.path.startswith('/puzzles') %}nav-selected{% endif %}">Puzzles</a></li>
                 <li><a href="/projects" class="{% if request.path == '/projects' %}nav-selected{% endif %}">Projects</a></li>
                 <li><a href="/resources" class="{% if request.path == '/resources' %}nav-selected{% endif %}">Resources</a></li>
             </ul>
         </div>
+        {% if request.path.startswith('/puzzles') %}
+        <div id="puzzle-nav" class="puzzle-nav">
+            <ul>
+                <li><a href="{{ url_for('puzzles.home') }}" class="{% if request.path == '/puzzles/' or request.path == '/puzzles' %}puzzle-nav-selected{% endif %}">Recent Puzzles</a></li>
+                <li><a href="{{ url_for('puzzles.create') }}" class="{% if request.path == '/puzzles/create' %}puzzle-nav-selected{% endif %}">Create a Puzzle</a></li>
+                <li><a href="{{ url_for('puzzles.index') }}" class="{% if request.path == '/puzzles/index' %}puzzle-nav-selected{% endif %}">Puzzle Index</a></li>
+            </ul>
+        </div>
+        {% endif %}
         <div id="content" class="content">{% block content %}{% endblock %}</div>
         <div id="footer" class="footer">
             <p>&copy; 2025 DXSF Computer Science Club</p>
