@@ -1,6 +1,24 @@
 body {
     margin: 0;
     font-family: 'EB Garamond', serif;
+    background: url('../images/noise.png');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-link {
+    text-decoration: none;
 }
 
 .header {

@@ -31,6 +31,6 @@ def create_app():
 
     @app.errorhandler(404)
     def page_not_found(error):
-        return render_template('auth/page_not_found.html'), 404
+        return render_template('pagenotfound.html'), 404
 
     return app

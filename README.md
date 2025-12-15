@@ -40,6 +40,12 @@ brew install python
 if you are on macOS, or you can find other installation options here: https://www.python.org/downloads/)
 
 
+Activate the virtual environment with:
+
+```bash
+source venv/bin/activate
+```
+
 Install the necessary packages:
 
 ```bash

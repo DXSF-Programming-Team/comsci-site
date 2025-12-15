@@ -1,0 +1,11 @@
+- add puzzle archive
+    - sort/filter by:
+        - date
+        - description/title/category/tags/difficulty
+
+- hook up code block to try it online (https://tio.run/#)
+
+- add database and puzzle upload
+    - text compression (huffman codes?)
+
+- descriptions to home/about/projects/resources
