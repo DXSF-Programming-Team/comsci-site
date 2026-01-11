@@ -125,6 +125,12 @@ body {
     padding: 20px;
 }
 
+.body-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
 .footer {
     background-color: #002b5b;
     width: 100%;

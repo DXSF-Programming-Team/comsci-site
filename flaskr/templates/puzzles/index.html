@@ -2,6 +2,12 @@
 
 {% block title %}Puzzles{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/puzzles.css') }}">
+{% endblock %}
+
 {% block content %}
+<p class="warning">Please note that the puzzle section is a work in progress, and not currently active. Sorry for the mess, and it will be here soon!</p>
+
 <h1>All Puzzles</h1>
 {% endblock %}
