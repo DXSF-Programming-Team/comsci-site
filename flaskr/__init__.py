@@ -5,7 +5,7 @@ from flask import Flask, redirect, url_for, send_from_directory, render_template
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY='dev',
+        SECRET_KEY=os.getenv("SECRET_KEY", default="dev"),
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
 
