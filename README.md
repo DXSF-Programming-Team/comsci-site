@@ -28,7 +28,7 @@ This clones the GitHub repository into your current directory.
 Then create a virtual environment:
 
 ```bash
-python venv -m venv
+python3 -m venv venv
 ```
 
 A virtual environment allows you to install the python packages the site needs to run without installing them globally.
@@ -50,11 +50,6 @@ Install the necessary packages:
 
 ```bash
 pip install -r requirements.txt
-```
-
-Initialize the database:
-```bash
-flask --app flaskr init-db
 ```
 
 Then you can run the site locally with the following command:
